@@ -10,7 +10,7 @@ function App() {
 
       
       <Homepage/>
-     Hi I Am App
+   
     </div>
   );
 }
