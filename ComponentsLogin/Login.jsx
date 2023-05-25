@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Style from './Login.css'
 import video1 from "../assets/video4.mp4";
 
 const Dummy = () => {

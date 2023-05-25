@@ -11,10 +11,11 @@ import {
   FormErrorMessage,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import video1 from "../assets/video4.mp4";
 import { useState } from "react";
 import axios from "axios";
+import style from './SignUp.css'
 
 const SignUp = () => {
   const [show, setShow] = React.useState(false);
