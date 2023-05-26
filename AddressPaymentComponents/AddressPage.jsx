@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  Center,
   FormControl,
   FormLabel,
   Input,
   Heading,
   Flex,
+  Box,
   Button,
   FormErrorMessage,
 } from "@chakra-ui/react";
@@ -86,203 +86,211 @@ function AddressPage() {
     zip;
 
   return (
-
-    <Center maxW="container.sm"
-      boxShadow="md"
-      mt="30px"
-      rounded="md"
-      backgroundImage="url('https://img.freepik.com/free-vector/realistic-travel-elements-background_23-2148049637.jpg?size=626&ext=jpg&ga=GA1.1.144004436.1678856088&semt=ais')"
+    <Box backgroundImage="url('https://i.pinimg.com/564x/55/e2/e9/55e2e9928218217a11358e5557461f3e.jpg')"
       backgroundSize="cover"
-      backgroundPosition="center"
-      minHeight="90vh"
-      maxWidth={"90%"}
+      backgroundPosition=''
+      // minHeight="90vh"
+      // maxWidth={"90%"}
+      // borderBottomRadius="30%"
+      // maxWidth={"100%"}
       margin="auto"
-      borderBottomRadius="30%"
       display={"flex"}
-      flexDirection="column"
-    >
-      <Heading color={'orange'} 
-      mt='50' mb='20px'>Traveller Address </Heading>
-      <form onSubmit={handleSubmit}>
-        <Flex mt='20px'>
-          <FormControl isRequired mb="20px" isInvalid={!!formErrors.firstName}>
-            <FormLabel color={"black"}>First Name</FormLabel>
+      alignItems={'center'}
+      justifyContent='center'>
+      <Box maxW="container.sm"
+        boxShadow="md"
+        mt="30px"
+        mb="30px"
+        rounded="md"
+        bg='orange.50'
+        width='600px'
+        p='25px'
+        display={"flex"}
+        flexDirection="column"
+      >
+        <Heading color={'orange'}
+          mb='20px'>Traveller Address </Heading>
+        <form onSubmit={handleSubmit}>
+          <Flex mt='20px'>
+            <FormControl isRequired mb="20px" isInvalid={!!formErrors.firstName}>
+              <FormLabel color={"black"}>First Name</FormLabel>
+              <Input
+                type="text"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder="First Name"
+                _placeholder={{ color: "grey" }}
+                borderColor="blackAlpha.500"
+                color="black"
+                bg="transparent"
+                autoComplete='off'
+              />
+              <FormErrorMessage>{formErrors.firstName}</FormErrorMessage>
+            </FormControl>
+            <FormControl mb="10px" isRequired isInvalid={!!formErrors.lastName}>
+              <FormLabel color={"black"}>Last Name</FormLabel>
+              <Input
+                type="text"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                placeholder="Last Name"
+                _placeholder={{ color: "grey" }}
+                borderColor="blackAlpha.500"
+                color="black"
+                bg="transparent"
+                _webkitAutofill={{ backgroundColor: "transparent important" }}
+              />
+              <FormErrorMessage>{formErrors.lastName}</FormErrorMessage>
+            </FormControl>
+          </Flex>
+          <Flex>
+            <FormControl
+              mb="10px"
+              isRequired
+              isInvalid={!!formErrors.phoneNumber}
+            >
+              <FormLabel color={"black"}>Phone Number</FormLabel>
+              <Input
+                type="number"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                placeholder="Phone Number"
+                _placeholder={{ color: "grey" }}
+                borderColor="blackAlpha.500"
+                color="black"
+                bg="transparent"
+                _webkitAutofill={{ backgroundColor: "transparent important" }}
+              />
+              <FormErrorMessage>{formErrors.phoneNumber}</FormErrorMessage>
+            </FormControl>
+
+            <FormControl isInvalid={!!formErrors.dateOfBirth}>
+              <FormLabel color={"black"}>Date of Birth</FormLabel>
+              <Input
+                type="date"
+                value={dateOfBirth}
+                onChange={(e) => setDateOfBirth(e.target.value)}
+                placeholder="Date of Birth"
+                _placeholder={{ color: "grey" }}
+                borderColor="blackAlpha.500"
+                color="black"
+                bg="transparent"
+                _webkitAutofill={{ backgroundColor: "transparent important" }}
+              />
+              <FormErrorMessage>{formErrors.dateOfBirth}</FormErrorMessage>
+            </FormControl>
+          </Flex>
+
+          <FormControl mb="10px" isRequired isInvalid={!!formErrors.email}>
+            <FormLabel color={"black"}>Email</FormLabel>
             <Input
               type="text"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              placeholder="First Name"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
               _placeholder={{ color: "grey" }}
               borderColor="blackAlpha.500"
               color="black"
               bg="transparent"
-              autoComplete='off'
+              _webkitAutofill={{ backgroundColor: "transparent important" }}
             />
-            <FormErrorMessage>{formErrors.firstName}</FormErrorMessage>
+            <FormErrorMessage>{formErrors.email}</FormErrorMessage>
           </FormControl>
-          <FormControl mb="10px" isRequired isInvalid={!!formErrors.lastName}>
-            <FormLabel color={"black"}>Last Name</FormLabel>
+
+          <FormControl mb="10px" isRequired isInvalid={!!formErrors.address1}>
+            <FormLabel color={"black"}>Address</FormLabel>
             <Input
               type="text"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              placeholder="Last Name"
+              value={address1}
+              onChange={(e) => setAddress1(e.target.value)}
+              placeholder="H.No"
               _placeholder={{ color: "grey" }}
               borderColor="blackAlpha.500"
               color="black"
               bg="transparent"
               _webkitAutofill={{ backgroundColor: "transparent important" }}
             />
-            <FormErrorMessage>{formErrors.lastName}</FormErrorMessage>
-          </FormControl>
-        </Flex>
-        <Flex>
-          <FormControl
-            mb="10px"
-            isRequired
-            isInvalid={!!formErrors.phoneNumber}
-          >
-            <FormLabel color={"black"}>Phone Number</FormLabel>
-            <Input
-              type="number"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              placeholder="Phone Number"
-              _placeholder={{ color: "grey" }}
-              borderColor="blackAlpha.500"
-              color="black"
-              bg="transparent"
-              _webkitAutofill={{ backgroundColor: "transparent important" }}
-            />
-            <FormErrorMessage>{formErrors.phoneNumber}</FormErrorMessage>
+            <FormErrorMessage>{formErrors.address1}</FormErrorMessage>
           </FormControl>
 
-          <FormControl isInvalid={!!formErrors.dateOfBirth}>
-            <FormLabel color={"black"}>Date of Birth</FormLabel>
-            <Input
-              type="date"
-              value={dateOfBirth}
-              onChange={(e) => setDateOfBirth(e.target.value)}
-              placeholder="Date of Birth"
-              _placeholder={{ color: "grey" }}
-              borderColor="blackAlpha.500"
-              color="black"
-              bg="transparent"
-              _webkitAutofill={{ backgroundColor: "transparent important" }}
-            />
-            <FormErrorMessage>{formErrors.dateOfBirth}</FormErrorMessage>
-          </FormControl>
-        </Flex>
-
-        <FormControl mb="10px" isRequired isInvalid={!!formErrors.email}>
-          <FormLabel color={"black"}>Email</FormLabel>
-          <Input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-            _placeholder={{ color: "grey" }}
-            borderColor="blackAlpha.500"
-            color="black"
-            bg="transparent"
-            _webkitAutofill={{ backgroundColor: "transparent important" }}
-          />
-          <FormErrorMessage>{formErrors.email}</FormErrorMessage>
-        </FormControl>
-
-        <FormControl mb="10px" isRequired isInvalid={!!formErrors.address1}>
-          <FormLabel color={"black"}>Address</FormLabel>
-          <Input
-            type="text"
-            value={address1}
-            onChange={(e) => setAddress1(e.target.value)}
-            placeholder="H.No"
-            _placeholder={{ color: "grey" }}
-            borderColor="blackAlpha.500"
-            color="black"
-            bg="transparent"
-            _webkitAutofill={{ backgroundColor: "transparent important" }}
-          />
-          <FormErrorMessage>{formErrors.address1}</FormErrorMessage>
-        </FormControl>
-
-        <FormControl mb="10px">
-          <FormLabel color={"black"}>Street</FormLabel>
-          <Input
-            type="text"
-            value={address2}
-            onChange={(e) => setAddress2(e.target.value)}
-            placeholder="Street"
-            _placeholder={{ color: "grey" }}
-            borderColor="blackAlpha.500"
-            color="black"
-            bg="transparent"
-            _webkitAutofill={{ backgroundColor: "transparent important" }}
-          />
-        </FormControl>
-
-        <Flex>
-          <FormControl mb="10px" isRequired isInvalid={!!formErrors.city}>
-            <FormLabel color={"black"}>City</FormLabel>
+          <FormControl mb="10px">
+            <FormLabel color={"black"}>Street</FormLabel>
             <Input
               type="text"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-              placeholder="City"
+              value={address2}
+              onChange={(e) => setAddress2(e.target.value)}
+              placeholder="Street"
               _placeholder={{ color: "grey" }}
               borderColor="blackAlpha.500"
               color="black"
               bg="transparent"
               _webkitAutofill={{ backgroundColor: "transparent important" }}
             />
-            <FormErrorMessage>{formErrors.city}</FormErrorMessage>
           </FormControl>
-          <FormControl mb="10px" isRequired isInvalid={!!formErrors.state}>
-            <FormLabel color={"black"}>State</FormLabel>
+
+          <Flex>
+            <FormControl mb="10px" isRequired isInvalid={!!formErrors.city}>
+              <FormLabel color={"black"}>City</FormLabel>
+              <Input
+                type="text"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                placeholder="City"
+                _placeholder={{ color: "grey" }}
+                borderColor="blackAlpha.500"
+                color="black"
+                bg="transparent"
+                _webkitAutofill={{ backgroundColor: "transparent important" }}
+              />
+              <FormErrorMessage>{formErrors.city}</FormErrorMessage>
+            </FormControl>
+            <FormControl mb="10px" isRequired isInvalid={!!formErrors.state}>
+              <FormLabel color={"black"}>State</FormLabel>
+              <Input
+                type="text"
+                value={state}
+                onChange={(e) => setState(e.target.value)}
+                placeholder="State"
+                _placeholder={{ color: "grey" }}
+                borderColor="blackAlpha.500"
+                color="black"
+                bg="transparent"
+                _webkitAutofill={{ backgroundColor: "transparent important" }}
+              />
+              <FormErrorMessage>{formErrors.state}</FormErrorMessage>
+            </FormControl>
+          </Flex>
+
+          <FormControl mb="10px" isRequired isInvalid={!!formErrors.zip}>
+            <FormLabel color={"black"}>ZIP Code</FormLabel>
             <Input
               type="text"
-              value={state}
-              onChange={(e) => setState(e.target.value)}
-              placeholder="State"
+              value={zip}
+              onChange={(e) => setZip(e.target.value)}
+              placeholder="Zip Code"
               _placeholder={{ color: "grey" }}
               borderColor="blackAlpha.500"
               color="black"
               bg="transparent"
               _webkitAutofill={{ backgroundColor: "transparent important" }}
             />
-            <FormErrorMessage>{formErrors.state}</FormErrorMessage>
+            <FormErrorMessage>{formErrors.zip}</FormErrorMessage>
           </FormControl>
-        </Flex>
 
-        <FormControl mb="10px" isRequired isInvalid={!!formErrors.zip}>
-          <FormLabel color={"black"}>ZIP Code</FormLabel>
-          <Input
-            type="text"
-            value={zip}
-            onChange={(e) => setZip(e.target.value)}
-            placeholder="Zip Code"
-            _placeholder={{ color: "grey" }}
-            borderColor="blackAlpha.500"
-            color="black"
-            bg="transparent"
-            _webkitAutofill={{ backgroundColor: "transparent important" }}
-          />
-          <FormErrorMessage>{formErrors.zip}</FormErrorMessage>
-        </FormControl>
+          <Link to={isAllFieldsFilled ? "/payment" : "#"}>
+            <Button
+              mt="20px"
+              type="submit"
+              colorScheme="orange"
+              isDisabled={!isAllFieldsFilled}
+            >
+              Submit
+            </Button>
+          </Link>
+        </form>
+      </Box>
+    </Box>
 
-        <Link to={isAllFieldsFilled ? "/payment" : "#"}>
-          <Button
-            mt="20px"
-            type="submit"
-            colorScheme="orange"
-            isDisabled={!isAllFieldsFilled}
-            mb='20px'
-          >
-            Submit
-          </Button>
-        </Link>
-      </form>
-    </Center>
   );
 }
 
