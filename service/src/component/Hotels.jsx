@@ -1,9 +1,14 @@
 import { Image ,Box, Center, Heading, Text, Stack, Button, Grid } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getDetailsData } from '../Reducer/action';
 
 function Hotels({ src }) {
+  let dispatch = useDispatch();
+
   return (
     <Grid templateColumns='repeat(3, 1fr)' gap={6}>
-      {src.map((ele) => (
+      {src.length>0 && src.map((ele) => (
         <Center py={6} key={ele.id}>
           <Box
             maxW={'445px'}
@@ -22,7 +27,9 @@ function Hotels({ src }) {
                 alt={ele.hotel_name}
                 // layout={'fill'}
               />
+              <Link to='/Details'>
               <Button
+                onClick={(e)=>{dispatch(getDetailsData(ele))}}
                 position="absolute"
                 bottom="-7%"
                 right="38%"
@@ -31,6 +38,7 @@ function Hotels({ src }) {
                 >
                 Show More
             </Button>
+            </Link>
             </Box>
             <Stack>
               <Text
