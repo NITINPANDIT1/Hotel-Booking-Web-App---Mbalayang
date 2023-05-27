@@ -3,6 +3,7 @@ import { SearchIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import Hotels from './Hotels';
+import Footer from './footer';
 
 function Services(){
     const [Hotel,setHotel]=useState([])
@@ -18,7 +19,7 @@ function Services(){
             if(value===""){
                 return Ele
             }
-            return ele.place_name===value;
+            return ele.place_name.toLowerCase().includes(value.toLowerCase());
         })
         console.log(value)
         setEle(newdata);
@@ -39,13 +40,14 @@ function Services(){
             Ele.map((ele,idx)=>{
                 return (
                 <div>
-                    <Hotels src={[...ele.hotels,ele.place_name]}/>
+                    <Hotels src={ele.hotels}/>
                 </div>
                 )
             })
             :
             <Heading margin={"100px"} alignSelf={"center"}>Loading...</Heading>
         }
+        <Footer/>
         </>
     )
 }

@@ -1,7 +1,8 @@
-import { Image ,Box, Center, Heading, Text, Stack, Button, Grid } from '@chakra-ui/react';
+import { Image ,Box, Center, Heading, Text, Stack, Button, Grid, Flex } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getDetailsData } from '../Reducer/action';
+import { StarIcon } from '@chakra-ui/icons';
 
 function Hotels({ src }) {
   let dispatch = useDispatch();
@@ -57,6 +58,9 @@ function Hotels({ src }) {
               >
                 {ele.hotel_name}
               </Heading>
+              <Flex pl='39%'>
+                <StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/>
+              </Flex>
               <Text color={'gray.500'}>
                 {ele.description}
               </Text>

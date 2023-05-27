@@ -1,6 +1,7 @@
 import React from 'react';
-import { Grid, GridItem, VStack, Heading, Text, UnorderedList, ListItem, Box } from '@chakra-ui/react';
+import { Grid, GridItem, VStack, Heading, Text, SimpleGrid, Box, Image, Button } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
+import Footer from './footer';
 
 const HotelDetailsCard = () => {
   const reviews = []; // Assuming reviews data is fetched from an API or database
@@ -8,9 +9,10 @@ const HotelDetailsCard = () => {
   const amenities = data.facilities;
   console.log(data);
   return (
+    <div>
     <Grid templateColumns="repeat(2, minmax(0, 1fr))" gap={8} p={4}>
       <GridItem colSpan={1}>
-        <img src={data.image} alt={data.hotel_name} style={{ maxWidth: '100%' }} />
+        <Image src={data.image} alt={data.hotel_name} style={{ maxWidth: '100%' }} w={'100%'} h={'100%'}/>
       </GridItem>
 
       <GridItem colSpan={1}>
@@ -20,25 +22,32 @@ const HotelDetailsCard = () => {
 
           <Box w="100%">
             <Heading fontSize="xl">Description</Heading>
-            <Text color="gray.500">
+            <Text color="gray.500" align={'left'}>
               {data.overview}
             </Text>
           </Box>
 
           <Box w="100%">
             <Heading fontSize="xl">Amenities</Heading>
-            <UnorderedList>
+            <SimpleGrid columns={4} spacing={4}>
               {amenities.map((amenity, index) => (
-                <ListItem key={index}>{amenity}</ListItem>
+                <Box border={'1px'} key={index}>{amenity}</Box>
               ))}
-            </UnorderedList>
+            </SimpleGrid>
           </Box>
 
           <Box w="100%">
             <Heading fontSize="xl">Price</Heading>
             <Text color="green.500" fontSize="2xl">INR {data.price_inr} per night</Text>
           </Box>
-
+          <Box w="100%">
+          <Button
+                bg="#fb6435"
+                color="white"
+                >
+                Book Now
+            </Button>
+          </Box>
           <Box w="100%">
             <Heading fontSize="xl">Reviews</Heading>
             {reviews.length > 0 ? (
@@ -58,6 +67,8 @@ const HotelDetailsCard = () => {
         </VStack>
       </GridItem>
     </Grid>
+    <Footer/>
+    </div>
   );
 };
 
