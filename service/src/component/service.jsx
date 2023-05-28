@@ -1,4 +1,4 @@
-import { Input, Stack, InputGroup, InputRightElement, Heading } from '@chakra-ui/react'
+import { Input, Stack, InputGroup, InputRightElement, Spinner, Heading } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 import axios from "axios";
@@ -8,10 +8,24 @@ import Footer from './footer';
 function Services(){
     const [Hotel,setHotel]=useState([])
     const [Ele,setEle]=useState([])
+    const [seconds, setSeconds] = useState(0);
+    const [isActive, setIsActive] = useState(true);
 
     useEffect(()=>{
-        axios.get(`https://run.mocky.io/v3/bbb81a69-991a-4ae5-880f-47b41581b2a6`)
-        .then((data)=>{setHotel(data.data.places);setEle(data.data.places);console.log(data.data.places);})
+        axios.get(`https://run.mocky.io/v3/34cddf8b-c355-450a-a51b-7fc56e49f02e`)
+        .then((data)=>{setHotel(data.data.places);setEle(data.data.places);console.log(data.data.places);});
+        
+        let interval=null;
+        if (isActive) {
+            interval = setInterval(() => {
+              setSeconds((prevSeconds) => prevSeconds + 1);
+            }, 1000);
+      
+            if (seconds === 2) {
+              clearInterval(interval);
+              setIsActive(false);
+            }
+        }
     },[])
 
     function search(value){
@@ -44,8 +58,7 @@ function Services(){
                 </div>
                 )
             })
-            :
-            <Heading margin={"100px"} alignSelf={"center"}>Loading...</Heading>
+            :isActive===true?<Spinner margin={'20%'} alignSelf={'center'}/>:<Heading margin={'20%'} alignSelf={'center'}>Not found</Heading>
         }
         <Footer/>
         </>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, GridItem, VStack, Heading, Text, SimpleGrid, Box, Image, Button } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
 
 const HotelDetailsCard = () => {
   const reviews = []; // Assuming reviews data is fetched from an API or database
@@ -41,12 +42,14 @@ const HotelDetailsCard = () => {
             <Text color="green.500" fontSize="2xl">INR {data.price_inr} per night</Text>
           </Box>
           <Box w="100%">
+          <Link to='/address'>
           <Button
                 bg="#fb6435"
                 color="white"
                 >
                 Book Now
             </Button>
+            </Link>
           </Box>
           <Box w="100%">
             <Heading fontSize="xl">Reviews</Heading>
