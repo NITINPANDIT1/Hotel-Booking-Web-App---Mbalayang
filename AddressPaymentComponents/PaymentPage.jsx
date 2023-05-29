@@ -53,10 +53,7 @@ function PaymentPage() {
     <Box backgroundImage="url('https://i.pinimg.com/564x/d1/88/c8/d188c8076eada2a6514da6a96aadb20b.jpg')"
       backgroundSize="cover"
       backgroundPosition="center"
-      // minHeight="90vh"
-      // maxWidth={"90%"}
       margin="auto"
-      // borderBottomRadius="30%"
       display={"flex"}
       flexDirection="column"
       alignItems={'center'}
