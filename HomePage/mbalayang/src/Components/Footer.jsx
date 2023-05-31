@@ -51,9 +51,9 @@ const Footer = () => {
       <Flex justify="center">
         <Box>
           <Text mb={2}>Subscribe to our newsletter for offers:</Text>
-          <Flex>
+          <Flex alignItems={"center"}>
             <Input placeholder="Enter your email" mr={2} />
-            <Button colorScheme="teal" size="sm">
+            <Button colorScheme="teal" size="md">
               Subscribe
             </Button>
           </Flex>
