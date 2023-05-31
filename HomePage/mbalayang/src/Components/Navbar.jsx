@@ -12,22 +12,22 @@ const Navbar = () => {
    
         </Box>
         <Box margin={"auto"} >
-        <Button as={Link} to="/signup" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        <Button as={Link} to="/signup" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Signup
         </Button>
-        <Button as={Link} to="/login" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        <Button as={Link} to="/login" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Login
         </Button>
-        <Button as={Link} to="/services" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        <Button as={Link} to="/services" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
         Services
         </Button>
-        <Button as={Link} to="/Details" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        <Button as={Link} to="/Details" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Details
         </Button>
-        <Button as={Link} to="/products"  colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        <Button as={Link} to="/products"  colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Products
         </Button>
-        <Button as={Link} to="/products" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        <Button as={Link} to="/products" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Products
         </Button>
       </Box>

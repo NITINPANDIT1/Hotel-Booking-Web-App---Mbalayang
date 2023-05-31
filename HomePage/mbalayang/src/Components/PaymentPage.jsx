@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input, Heading, Button, FormControl, Box, FormErrorMessage, FormLabel } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 // import { useNavigate } from "react-router-dom";
 
 function PaymentPage() {
@@ -59,6 +60,7 @@ function PaymentPage() {
       alignItems={'center'}
       justifyContent='center'
     >
+        <Navbar/>
       <Box maxW="container.sm"
         m='127px'
         boxShadow="md"

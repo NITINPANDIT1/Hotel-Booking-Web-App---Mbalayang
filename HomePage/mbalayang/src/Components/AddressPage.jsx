@@ -10,6 +10,7 @@ import {
   Button,
   FormErrorMessage,
 } from "@chakra-ui/react";
+import Navbar from "./Navbar";
 
 function AddressPage() {
   const [firstName, setFirstName] = useState("");
@@ -86,6 +87,7 @@ function AddressPage() {
     zip;
 
   return (
+    <>
     <Box backgroundImage="url('https://i.pinimg.com/564x/55/e2/e9/55e2e9928218217a11358e5557461f3e.jpg')"
       backgroundSize="cover"
       backgroundPosition=''
@@ -94,9 +96,10 @@ function AddressPage() {
       // borderBottomRadius="30%"
       // maxWidth={"100%"}
       margin="auto"
-      display={"flex"}
+      display={"block"}
       alignItems={'center'}
       justifyContent='center'>
+     <Navbar/>
       <Box maxW="container.sm"
         boxShadow="md"
         mt="30px"
@@ -107,7 +110,9 @@ function AddressPage() {
         p='25px'
         display={"flex"}
         flexDirection="column"
+        margin={"auto"}
       >
+        
         <Heading color={'orange'}
           mb='20px'>Traveller Address </Heading>
         <form onSubmit={handleSubmit}>
@@ -290,7 +295,7 @@ function AddressPage() {
         </form>
       </Box>
     </Box>
-
+    </>
   );
 }
 
