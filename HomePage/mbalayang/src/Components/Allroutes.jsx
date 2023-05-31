@@ -13,8 +13,8 @@ function Allroutes() {
     return ( 
     <Routes>
         <Route path="/" element={<Homepage/>}/>
-        {/* <Route path="/services" element={<Services/>}/>
-        <Route path="/Details" element={<HotelDetailsCard/>}/> */}
+        <Route path="/services" element={<Services/>}/>
+        <Route path="/Details" element={<HotelDetailsCard/>}/>
     <Route path="/address" element={<AddressPage />} />
     <Route path="/payment" element={<PaymentPage />} />
     <Route path="/loading" element={<LoadingPage />} />
