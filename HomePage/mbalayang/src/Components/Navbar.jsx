@@ -18,11 +18,11 @@ const Navbar = () => {
         <Button as={Link} to="/login" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Login
         </Button>
-        <Button as={Link} to="/products" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
-          Products
+        <Button as={Link} to="/services" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        Services
         </Button>
-        <Button as={Link} to="/products" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
-          Products
+        <Button as={Link} to="/Details" colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+          Details
         </Button>
         <Button as={Link} to="/products"  colorScheme='orange' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Products
@@ -32,7 +32,7 @@ const Navbar = () => {
         </Button>
       </Box>
       <Box display ="flex" width="10%">
-      <Button as={Link} to="/products" variant="ghost" mx="0.2rem" colorScheme='white' >
+      <Button as={Link} to="#" variant="ghost" mx="0.2rem" colorScheme='white' >
       <h5>CONTACT US</h5>
         </Button>
        
