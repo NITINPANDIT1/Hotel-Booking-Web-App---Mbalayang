@@ -1,0 +1,47 @@
+.mainLogin {
+    width: 100%;
+    height: 100vh;
+  }
+  .overlayLogin {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .videoLogin {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .containerLogin {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .formLogin {
+    width: 35%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: white;
+  }
+  .signbtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: rgb(253, 101, 54);
+    border-radius: 10px;
+    color: white;
+    /* margin-left: 40%; */
+  }
+  .signbtn:hover {
+    background-color: rgb(199, 87, 52);
+    box-shadow: 0px 0px 5px rgb(88, 84, 84);
+  }
