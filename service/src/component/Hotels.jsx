@@ -8,7 +8,7 @@ function Hotels({ src }) {
   let dispatch = useDispatch();
 
   return (
-    <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+    <Grid templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)","repeat(3, 1fr)"]} gap={6}>
       {src.length>0 && src.map((ele) => (
         <Center py={6} key={ele.id}>
           <Box
@@ -29,16 +29,18 @@ function Hotels({ src }) {
                 // layout={'fill'}
               />
               <Link to='/Details'>
+              <Center>
               <Button
                 onClick={(e)=>{dispatch(getDetailsData(ele))}}
                 position="absolute"
                 bottom="-7%"
-                right="38%"
+                // right="38%"
                 bg="#fb6435"
                 color="white"
                 >
                 Show More
-            </Button>
+              </Button>
+              </Center>
             </Link>
             </Box>
             <Stack>

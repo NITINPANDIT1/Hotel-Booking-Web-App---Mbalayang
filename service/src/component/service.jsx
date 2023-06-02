@@ -1,5 +1,5 @@
-import { Input, Stack, InputGroup, InputRightElement, Spinner, Heading } from '@chakra-ui/react'
-import { SearchIcon } from '@chakra-ui/icons';
+import { Input, Stack, InputGroup, InputRightElement, Spinner, Heading, Flex, Select, Spacer } from '@chakra-ui/react'
+import { SearchIcon, StarIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import Hotels from './Hotels';
@@ -38,6 +38,24 @@ function Services(){
         console.log(value)
         setEle(newdata);
     }
+
+    function handleSorting(e) {
+        if (e === "lth") {
+          const sortedData = Ele.map(place => ({
+            ...place,
+            hotels: [...place.hotels].sort((a, b) => a.price_inr - b.price_inr)
+          }));
+          setEle(sortedData);
+        } else if (e === "htl") {
+          const sortedData = Ele.map(place => ({
+            ...place,
+            hotels: [...place.hotels].sort((a, b) => b.price_inr - a.price_inr)
+          }));
+          setEle(sortedData);
+        } else {
+          setEle(Hotel);
+        }
+    }
     return (
         <>
         <Stack alignItems="center">
@@ -47,6 +65,41 @@ function Services(){
             <SearchIcon color="gray.500" />
             </InputRightElement>
         </InputGroup>
+        <Flex w={"50%"} pt={"3%"}>
+            <Select onChange={(e)=>{handleSorting(e.target.value)}} pr={"1%"}>
+                <option value={""}>Sort by Price</option>
+                <option value={"lth"}>Low to High</option>
+                <option value={"htl"}>High to Low</option>
+            </Select>
+            <Select pl={"1%"}>
+                <option value={""}>No Sorting</option>
+                <option value={"lth"}>
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                </option>
+                <option value={"htl"}>
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                </option>
+                <option value={"lth"}>
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                </option>
+                <option value={"htl"}>
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                </option>
+                <option value={"htl"}>
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                </option>
+            </Select>
+        </Flex>
         </Stack>
         {
             
