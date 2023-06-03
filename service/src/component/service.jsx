@@ -74,29 +74,19 @@ function Services(){
             <Select pl={"1%"}>
                 <option value={""}>No Sorting</option>
                 <option value={"lth"}>
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                ★
                 </option>
                 <option value={"htl"}>
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                ★★
                 </option>
                 <option value={"lth"}>
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                ★★★
                 </option>
                 <option value={"htl"}>
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                ★★★★
                 </option>
                 <option value={"htl"}>
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
-                <StarIcon color="yellow.400" /> {/* Render a single star */}
+                ★★★★★
                 </option>
             </Select>
         </Flex>
