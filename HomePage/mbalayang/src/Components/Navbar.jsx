@@ -1,13 +1,18 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { Flex, Box, Button } from '@chakra-ui/react';
 
+
 const Navbar = () => {
+ 
   return (
-    <Flex   marginLeft="10%" align="center" justify="space-between" color={"white"} padding="1rem" bg="" width={"80%"}>
+   
+
+    <div >
+    <Flex   marginLeft="10%" align="center" justify="space-between" color={"white"} padding="1rem" bg="" width={"80%"}  >
       <Box display ="flex" width="10%"  >
       <Button as={Link} to="/" variant="ghost" mx="0.2rem" colorScheme='white' >
-      <h3>MBALAYANG</h3>
+      <h3 >MBALAYANG</h3>
         </Button>
    
         </Box>
@@ -24,12 +29,12 @@ const Navbar = () => {
         <Button as={Link} to="/Details" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Details
         </Button>
-        <Button as={Link} to="/products"  colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        {/* <Button as={Link} to="/products"  colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Products
-        </Button>
-        <Button as={Link} to="/products" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        </Button> */}
+        {/* <Button as={Link} to="/products" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Products
-        </Button>
+        </Button> */}
       </Box>
       <Box display ="flex" width="10%">
       <Button as={Link} to="#" variant="ghost" mx="0.2rem" colorScheme='white' >
@@ -39,6 +44,7 @@ const Navbar = () => {
        
         </Box>
     </Flex>
+    </div>
   );
 };
 

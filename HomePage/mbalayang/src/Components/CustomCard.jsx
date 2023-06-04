@@ -12,7 +12,9 @@ const CustomCard = ({ imageUrl, title }) => {
       overflow="hidden"
       borderWidth="1px"
       borderRadius="md"
-      bg="tomato"
+      // backgroundColor='red.200'
+      bg="orange.500"
+      color={"white"}
     >
       <Image
         objectFit="cover"
