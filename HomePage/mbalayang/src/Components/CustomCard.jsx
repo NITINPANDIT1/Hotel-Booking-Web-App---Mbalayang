@@ -15,6 +15,7 @@ const CustomCard = ({ imageUrl, title }) => {
       // backgroundColor='red.200'
       bg="orange.500"
       color={"white"}
+      h="80px"
     >
       <Image
         objectFit="cover"

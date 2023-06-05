@@ -30,7 +30,7 @@ const Navbar = () => {
           Details
         </Button>
         <Button as={Link} to="/blog"  colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
-          Products
+          Blog
         </Button>
         {/* <Button as={Link} to="/products" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Products

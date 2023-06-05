@@ -11,6 +11,7 @@ import {
   FormErrorMessage,
 } from "@chakra-ui/react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function AddressPage() {
   const [firstName, setFirstName] = useState("");
@@ -294,6 +295,7 @@ function AddressPage() {
           </Link>
         </form>
       </Box>
+      <Footer/>
     </Box>
     </>
   );
