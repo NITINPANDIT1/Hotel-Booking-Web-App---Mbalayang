@@ -29,9 +29,9 @@ const Navbar = () => {
         <Button as={Link} to="/Details" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Details
         </Button>
-        {/* <Button as={Link} to="/products"  colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
+        <Button as={Link} to="/blog"  colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Products
-        </Button> */}
+        </Button>
         {/* <Button as={Link} to="/products" colorScheme='teal' variant="ghost" mx="0.5rem" textDecoration={"none"}>
           Products
         </Button> */}

@@ -7,6 +7,7 @@ import Login from './Login';
 import Homepage from './Homepage';
 import HotelDetailsCard from './details';
 import Services from './service';
+import BlogPage from './blog.jsx'
 
 
 function Allroutes() {
@@ -20,6 +21,7 @@ function Allroutes() {
     <Route path="/loading" element={<LoadingPage />} />
     <Route path="/signup" element={<SignUp></SignUp>}></Route>
     <Route path="/login" element={<Login></Login>}></Route>
+    <Route path="/blog" element={<BlogPage></BlogPage>}></Route>
   </Routes>
         
     );
