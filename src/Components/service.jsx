@@ -40,7 +40,7 @@ function Services(){
     }
     return (
         <>
-        <Stack alignItems="center">
+        <Stack  alignItems="center">
         <InputGroup w="30%" marginTop="20px">
             <Input variant="filled" placeholder="Filled" onChange={(e)=>{search(e.target.value)}}/>
             <InputRightElement>
