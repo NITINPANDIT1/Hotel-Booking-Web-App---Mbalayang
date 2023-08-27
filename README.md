@@ -52,10 +52,5 @@ We welcome contributions to enhance the features and user experience of the Hote
 4. Push to the branch: `git push origin feature-new-feature`
 5. Create a pull request explaining your changes.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 Feel free to contact any of the contributors if you have questions or need assistance regarding specific aspects of the project.
