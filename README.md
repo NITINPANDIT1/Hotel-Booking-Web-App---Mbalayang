@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Hotel Booking Web-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Hotel Booking Web-App, a project built using HTML, CSS, JavaScript, React, Redux, Chakra UI, JSON Server, and React Router. The app allows users to browse and book hotel rooms, leveraging modern web technologies for a seamless experience.
 
-## Available Scripts
+The project is deployed on Vercel and can be accessed at [mbalayang.vercel.app](https://mbalayang.vercel.app/).
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Hotel Listing:** Browse through a variety of available hotel rooms with details such as images, amenities, and pricing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Booking:** Users can select desired dates, room types, and book hotel rooms.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **State Management:** The project employs Redux for efficient state management, ensuring smooth interactions and updates.
 
-### `npm test`
+- **Responsive Design:** The user interface is designed to be responsive and accessible across various devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **JSON Server Backend:** Hotel data is simulated using JSON Server, allowing dynamic content generation.
 
-### `npm run build`
+## Contributors
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [NITIN SHARMA](https://github.com/NITINPANDIT1)
+- [SAI TEJA GOLI](https://github.com/Saiteja-Goli)
+- [Shaikh Abusaeed](https://github.com/skabusaeed1)
+- [Kamalakanta Mahapatra](https://github.com/Kamalakanta01)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- HTML, CSS, JavaScript: Building blocks of web development.
+- React: JavaScript library for building user interfaces.
+- Redux: State management for consistent data handling.
+- Chakra UI: Component library for creating modern UIs.
+- JSON Server: Simulated backend for handling hotel data.
+- React Router: Handling client-side routing.
+- Vercel: Deployment platform for web applications.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository: `git clone https://github.com/NITINPANDIT1/Hotel-Booking-Web-App---Mbalayang`
+2. Navigate to the project directory: `cd hotel-booking-web-app`
+3. Install dependencies: `npm install`
+4. Start the JSON Server: `npm run json-server`
+5. Start the development server: `npm start`
+6. Open your web browser and visit: `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+We welcome contributions to enhance the features and user experience of the Hotel Booking Web-App. To contribute:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-new-feature`
+3. Make your changes and commit them: `git commit -m "Add new feature"`
+4. Push to the branch: `git push origin feature-new-feature`
+5. Create a pull request explaining your changes.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the [MIT License](LICENSE).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contact any of the contributors if you have questions or need assistance regarding specific aspects of the project.
